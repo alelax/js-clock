@@ -1,0 +1,206 @@
+@font-face{
+ font-family:'digital-clock-font';
+ src: url('digitalclockfont/digital-7.ttf');
+}
+
+body {
+   background-color: black;
+}
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   text-align: center;
+   font-family:'digital-clock-font';
+}
+
+.clock-grid-container {
+   width: 100%;
+   height: 500px;
+   display: grid;
+   grid-template-columns: 50% 50%;
+   grid-template-rows: 10% 35% 10% 35% 10%;
+   position: absolute;
+   top: 10%;
+   left: 50%;
+   transform: translateX(-50%);
+   align-items: stretch;
+   color: rgba(0, 210, 8, 0.9);
+}
+
+
+
+
+#day{
+   grid-row-start: 1;
+   grid-row-end: 2;
+   grid-column-start: 1;
+   grid-column-end: 2;
+}
+
+#day-number{
+   grid-row-start: 1;
+   grid-row-end: 2;
+   grid-column-start: 2;
+   grid-column-end: 3;
+}
+
+#hour{
+   grid-row-start: 2;
+   grid-row-end: 3;
+   grid-column-start: 1;
+   grid-column-end: 3;
+
+}
+
+#seconds{
+   grid-row-start: 3;
+   grid-row-end: 4;
+   grid-column-start: 1;
+   grid-column-end: 3;
+
+}
+
+#minutes{
+   grid-row-start: 4;
+   grid-row-end: 5;
+   grid-column-start: 1;
+   grid-column-end: 3;
+
+}
+
+#month{
+   grid-row-start: 5;
+   grid-row-end: 6;
+   grid-column-start: 1;
+   grid-column-end: 2;
+}
+
+#year{
+   grid-row-start: 5;
+   grid-row-end: 6;
+   grid-column-start: 2;
+   grid-column-end: 3;
+}
+
+.xs-hidden {
+   display: none;
+}
+
+.small {
+   font-size: 40px;
+}
+
+.medium{
+   font-size: 60px;
+}
+
+.bigger {
+   font-size: 200px;
+}
+
+.self-stretch {
+   align-items: stretch;
+}
+
+.self-center {
+   align-self: center;
+}
+
+
+@media screen and (min-width: 576px) {
+
+   .clock-grid-container {
+      width: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: auto;
+      display: grid;
+      grid-template-columns: 40% 20% 40%;
+      grid-template-rows: 25% 25% 25% 25%;
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+   }
+
+   /* .clock-grid-container * {
+      min-height: 100px;
+   } */
+
+   .xs-hidden {
+      display: block;
+   }
+
+   .small {
+      font-size: 80px;
+   }
+
+   .medium {
+      font-size: 100px;
+   }
+
+   .bigger {
+      font-size: 250px;
+   }
+
+   #day{
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end:  2;
+
+   }
+
+   #day-number{
+      grid-column-start: 3;
+      grid-column-end: 4;
+      grid-row-start: 1;
+      grid-row-end:  2;
+   }
+
+   #hour{
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end:  4;
+   }
+
+   #dots {
+
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end:  3;
+   }
+
+   #seconds{
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 3;
+      grid-row-end:  4;
+   }
+
+   #minutes{
+      grid-column-start: 3;
+      grid-column-end: 4;
+      grid-row-start: 2;
+      grid-row-end:  4;
+   }
+
+   #month{
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 4;
+      grid-row-end:  5;
+   }
+
+   #year{
+      grid-column-start: 3;
+      grid-column-end: 4;
+      grid-row-start: 4;
+      grid-row-end:  5;
+   }
+
+}
